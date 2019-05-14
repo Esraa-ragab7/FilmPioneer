@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTZ-QF-1xO">
+                                <rect key="frame" x="87.5" y="204" width="200" height="259"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME TO " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnv-8p-RW5">
+                                        <rect key="frame" x="34" y="220" width="132" height="17"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gear" translatesAutoresizingMaskIntoConstraints="NO" id="vcK-Be-oJ1">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="kzJ-kk-HjA"/>
+                                            <constraint firstAttribute="height" constant="200" id="tGA-vu-fcs"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FILMPIONEER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8k-3V-uhe">
+                                        <rect key="frame" x="64" y="242" width="121" height="17"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="vcK-Be-oJ1" firstAttribute="leading" secondItem="CTZ-QF-1xO" secondAttribute="leading" id="0uP-rT-Sex"/>
+                                    <constraint firstItem="K8k-3V-uhe" firstAttribute="leading" secondItem="Vnv-8p-RW5" secondAttribute="leading" constant="30" id="BoD-PT-owi"/>
+                                    <constraint firstAttribute="bottom" secondItem="K8k-3V-uhe" secondAttribute="bottom" id="IYm-9d-NMi"/>
+                                    <constraint firstItem="Vnv-8p-RW5" firstAttribute="top" secondItem="vcK-Be-oJ1" secondAttribute="bottom" constant="20" id="Swm-l0-2cG"/>
+                                    <constraint firstItem="vcK-Be-oJ1" firstAttribute="top" secondItem="CTZ-QF-1xO" secondAttribute="top" id="XTN-4D-GWc"/>
+                                    <constraint firstItem="Vnv-8p-RW5" firstAttribute="centerX" secondItem="CTZ-QF-1xO" secondAttribute="centerX" id="aki-EN-4HD"/>
+                                    <constraint firstItem="K8k-3V-uhe" firstAttribute="top" secondItem="Vnv-8p-RW5" secondAttribute="bottom" constant="5" id="unI-SS-Hli"/>
+                                    <constraint firstAttribute="trailing" secondItem="vcK-Be-oJ1" secondAttribute="trailing" id="y9s-aL-fOi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.39037570510000003" green="0.0" blue="0.97201412669999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="CTZ-QF-1xO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Hze-3n-RgC"/>
+                            <constraint firstItem="CTZ-QF-1xO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="gc0-3O-xS9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Gear" width="200" height="200"/>
+    </resources>
+</document>
