@@ -15,6 +15,7 @@
 		F228140A2289902300FCB9BC /* MovieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22814092289902300FCB9BC /* MovieAppTests.swift */; };
 		F22814152289902300FCB9BC /* MovieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22814142289902300FCB9BC /* MovieAppUITests.swift */; };
 		F252B5C9228ADFB000FB9815 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5BE228ADFB000FB9815 /* TextField.swift */; };
+		F252B5CC228ADFB000FB9815 /* PTColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5C1228ADFB000FB9815 /* PTColors.swift */; };
 		F252B5EA228AF7B400FB9815 /* TextFieldExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5E9228AF7B400FB9815 /* TextFieldExtention.swift */; };
 		F252B5EC228B006400FB9815 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5EB228B006400FB9815 /* BaseVC.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		F22814142289902300FCB9BC /* MovieAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppUITests.swift; sourceTree = "<group>"; };
 		F22814162289902300FCB9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F252B5BE228ADFB000FB9815 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		F252B5C1228ADFB000FB9815 /* PTColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTColors.swift; sourceTree = "<group>"; };
 		F252B5E9228AF7B400FB9815 /* TextFieldExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtention.swift; sourceTree = "<group>"; };
 		F252B5EB228B006400FB9815 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +163,7 @@
 		F252B581228ADE0700FB9815 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F252B5C1228ADFB000FB9815 /* PTColors.swift */,
 				F252B5BE228ADFB000FB9815 /* TextField.swift */,
 				F252B5E9228AF7B400FB9815 /* TextFieldExtention.swift */,
 			);
@@ -299,6 +302,7 @@
 			files = (
 				F252B5C9228ADFB000FB9815 /* TextField.swift in Sources */,
 				F252B5EC228B006400FB9815 /* BaseVC.swift in Sources */,
+				F252B5CC228ADFB000FB9815 /* PTColors.swift in Sources */,
 				F22813F72289902200FCB9BC /* ViewController.swift in Sources */,
 				F252B5EA228AF7B400FB9815 /* TextFieldExtention.swift in Sources */,
 				F22813F52289902200FCB9BC /* AppDelegate.swift in Sources */,
