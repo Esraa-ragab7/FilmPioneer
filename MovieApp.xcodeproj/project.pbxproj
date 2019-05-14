@@ -14,6 +14,9 @@
 		F22813FF2289902300FCB9BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22813FD2289902300FCB9BC /* LaunchScreen.storyboard */; };
 		F228140A2289902300FCB9BC /* MovieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22814092289902300FCB9BC /* MovieAppTests.swift */; };
 		F22814152289902300FCB9BC /* MovieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22814142289902300FCB9BC /* MovieAppUITests.swift */; };
+		F252B5C9228ADFB000FB9815 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5BE228ADFB000FB9815 /* TextField.swift */; };
+		F252B5EA228AF7B400FB9815 /* TextFieldExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5E9228AF7B400FB9815 /* TextFieldExtention.swift */; };
+		F252B5EC228B006400FB9815 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5EB228B006400FB9815 /* BaseVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		F22814102289902300FCB9BC /* MovieAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22814142289902300FCB9BC /* MovieAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppUITests.swift; sourceTree = "<group>"; };
 		F22814162289902300FCB9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F252B5BE228ADFB000FB9815 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		F252B5E9228AF7B400FB9815 /* TextFieldExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtention.swift; sourceTree = "<group>"; };
+		F252B5EB228B006400FB9815 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +103,13 @@
 		F22813F32289902200FCB9BC /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				F252B5D0228AE01D00FB9815 /* Services */,
+				F252B581228ADE0700FB9815 /* Helpers */,
+				F252B580228ADDE900FB9815 /* Controllers */,
+				F252B57F228ADDE300FB9815 /* View */,
+				F252B57E228ADDD700FB9815 /* Modal */,
 				F22813F42289902200FCB9BC /* AppDelegate.swift */,
-				F22813F62289902200FCB9BC /* ViewController.swift */,
-				F22813F82289902200FCB9BC /* Main.storyboard */,
 				F22813FB2289902300FCB9BC /* Assets.xcassets */,
-				F22813FD2289902300FCB9BC /* LaunchScreen.storyboard */,
 				F22814002289902300FCB9BC /* Info.plist */,
 			);
 			path = MovieApp;
@@ -123,6 +131,40 @@
 				F22814162289902300FCB9BC /* Info.plist */,
 			);
 			path = MovieAppUITests;
+			sourceTree = "<group>";
+		};
+		F252B57E228ADDD700FB9815 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		F252B57F228ADDE300FB9815 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F22813F82289902200FCB9BC /* Main.storyboard */,
+				F22813FD2289902300FCB9BC /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F252B580228ADDE900FB9815 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F22813F62289902200FCB9BC /* ViewController.swift */,
+				F252B5EB228B006400FB9815 /* BaseVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F252B581228ADE0700FB9815 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F252B5BE228ADFB000FB9815 /* TextField.swift */,
+				F252B5E9228AF7B400FB9815 /* TextFieldExtention.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +297,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F252B5C9228ADFB000FB9815 /* TextField.swift in Sources */,
+				F252B5EC228B006400FB9815 /* BaseVC.swift in Sources */,
 				F22813F72289902200FCB9BC /* ViewController.swift in Sources */,
+				F252B5EA228AF7B400FB9815 /* TextFieldExtention.swift in Sources */,
 				F22813F52289902200FCB9BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
