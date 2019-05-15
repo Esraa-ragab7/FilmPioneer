@@ -19,7 +19,8 @@ class fullRawCell: UICollectionViewCell {
         self.title.text = title
         self.average.text = average
         self.date.text = date
-        self.posterImage.kf.setImage(with: URL(string: posterImage))
+        self.posterImage.kf.indicatorType = .activity
+        self.posterImage.kf.setImage(with: URL(string: posterImage), placeholder: #imageLiteral(resourceName: "placeholder"))
     }
 
 }
