@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FullRawCell" id="gTV-IL-0wX" customClass="fullRawCell" customModule="MovieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="110"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="365" height="110"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWQ-uh-GVz">
+                        <rect key="frame" x="0.0" y="0.0" width="365" height="110"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfB-O1-03c">
+                                <rect key="frame" x="125" y="45" width="9" height="18.5"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVE-tD-vvm">
+                                <rect key="frame" x="125" y="68.5" width="9" height="18.5"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooQ-d7-8dZ">
+                                <rect key="frame" x="125" y="20" width="230" height="20"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NZs-Mr-UAk">
+                                <rect key="frame" x="5" y="5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="V8B-zl-oxE"/>
+                                    <constraint firstAttribute="width" constant="100" id="fKO-Xh-ReQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NZs-Mr-UAk" firstAttribute="leading" secondItem="FWQ-uh-GVz" secondAttribute="leading" constant="5" id="0Lj-dR-Kqo"/>
+                            <constraint firstItem="NZs-Mr-UAk" firstAttribute="top" secondItem="FWQ-uh-GVz" secondAttribute="top" constant="5" id="3Ai-Z7-Jfa"/>
+                            <constraint firstItem="YfB-O1-03c" firstAttribute="top" secondItem="ooQ-d7-8dZ" secondAttribute="bottom" constant="5" id="9z2-C6-y7R"/>
+                            <constraint firstItem="yVE-tD-vvm" firstAttribute="top" secondItem="YfB-O1-03c" secondAttribute="bottom" constant="5" id="guh-Ng-j23"/>
+                            <constraint firstItem="yVE-tD-vvm" firstAttribute="leading" secondItem="NZs-Mr-UAk" secondAttribute="trailing" constant="20" id="hqb-eO-pyP"/>
+                            <constraint firstItem="ooQ-d7-8dZ" firstAttribute="top" secondItem="FWQ-uh-GVz" secondAttribute="top" constant="20" id="noJ-YH-6u3"/>
+                            <constraint firstAttribute="bottom" secondItem="NZs-Mr-UAk" secondAttribute="bottom" constant="5" id="rZ7-QQ-o31"/>
+                            <constraint firstItem="YfB-O1-03c" firstAttribute="centerX" secondItem="yVE-tD-vvm" secondAttribute="centerX" id="udl-L9-Ft4"/>
+                            <constraint firstItem="ooQ-d7-8dZ" firstAttribute="leading" secondItem="NZs-Mr-UAk" secondAttribute="trailing" constant="20" id="xLd-cV-rET"/>
+                            <constraint firstAttribute="trailing" secondItem="ooQ-d7-8dZ" secondAttribute="trailing" constant="10" id="zcI-dI-hF8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="FWQ-uh-GVz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="A2b-CT-Lol"/>
+                <constraint firstAttribute="trailing" secondItem="FWQ-uh-GVz" secondAttribute="trailing" id="UQD-Cg-heX"/>
+                <constraint firstAttribute="bottom" secondItem="FWQ-uh-GVz" secondAttribute="bottom" id="WIV-PY-2gN"/>
+                <constraint firstItem="FWQ-uh-GVz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Wsx-FM-FI5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="365" height="110"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="7"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="average" destination="YfB-O1-03c" id="ydN-7z-1VZ"/>
+                <outlet property="date" destination="yVE-tD-vvm" id="rL3-v8-sTc"/>
+                <outlet property="posterImage" destination="NZs-Mr-UAk" id="0hV-12-Evt"/>
+                <outlet property="title" destination="ooQ-d7-8dZ" id="fvs-Nj-WJt"/>
+            </connections>
+            <point key="canvasLocation" x="389.60000000000002" y="179.91004497751126"/>
+        </collectionViewCell>
+    </objects>
+</document>

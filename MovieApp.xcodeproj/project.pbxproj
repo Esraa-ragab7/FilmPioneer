@@ -23,6 +23,7 @@
 		F252B5EC228B006400FB9815 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5EB228B006400FB9815 /* BaseVC.swift */; };
 		F252B5EE228B10AC00FB9815 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5ED228B10AC00FB9815 /* NetworkManager.swift */; };
 		F252B5F0228C3F4200FB9815 /* ButtonExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5EF228C3F4200FB9815 /* ButtonExtention.swift */; };
+		F252B5F2228C51B300FB9815 /* TopRatedMoviesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5F1228C51B300FB9815 /* TopRatedMoviesVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		F252B5EB228B006400FB9815 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		F252B5ED228B10AC00FB9815 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F252B5EF228C3F4200FB9815 /* ButtonExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtention.swift; sourceTree = "<group>"; };
+		F252B5F1228C51B300FB9815 /* TopRatedMoviesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			children = (
 				F22813F62289902200FCB9BC /* LoginVC.swift */,
 				F252B5EB228B006400FB9815 /* BaseVC.swift */,
+				F252B5F1228C51B300FB9815 /* TopRatedMoviesVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				F252B5C9228ADFB000FB9815 /* TextField.swift in Sources */,
 				F252B5EC228B006400FB9815 /* BaseVC.swift in Sources */,
 				F252B5F0228C3F4200FB9815 /* ButtonExtention.swift in Sources */,
+				F252B5F2228C51B300FB9815 /* TopRatedMoviesVC.swift in Sources */,
 				F252B5CC228ADFB000FB9815 /* PTColors.swift in Sources */,
 				F252B5EE228B10AC00FB9815 /* NetworkManager.swift in Sources */,
 				F22813F72289902200FCB9BC /* LoginVC.swift in Sources */,
