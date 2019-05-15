@@ -1,11 +1,11 @@
 //
-//	swiftResults.swift
+//	Results.swift
 //	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation
 
 
-class swiftResults : NSObject, NSCoding{
+class Results : NSObject, NSCoding{
 
 	var adult : Bool!
 	var backdropPath : String!
@@ -19,7 +19,7 @@ class swiftResults : NSObject, NSCoding{
 	var releaseDate : String!
 	var title : String!
 	var video : Bool!
-	var voteAverage : Float!
+	var voteAverage : Double!
 	var voteCount : Int!
 
 
@@ -35,11 +35,11 @@ class swiftResults : NSObject, NSCoding{
 		originalTitle = dictionary["original_title"] as? String
 		overview = dictionary["overview"] as? String
 		popularity = dictionary["popularity"] as? Float
-		posterPath = dictionary["poster_path"] as? String
+        posterPath = "https://image.tmdb.org/t/p/w185/\(dictionary["poster_path"] as? String ?? "")"
 		releaseDate = dictionary["release_date"] as? String
 		title = dictionary["title"] as? String
 		video = dictionary["video"] as? Bool
-		voteAverage = dictionary["vote_average"] as? Float
+        voteAverage = Double(round(((dictionary["vote_average"] as? Double) ?? 0) * 10)/10)
 		voteCount = dictionary["vote_count"] as? Int
 	}
 
@@ -112,7 +112,7 @@ class swiftResults : NSObject, NSCoding{
          releaseDate = aDecoder.decodeObject(forKey: "release_date") as? String
          title = aDecoder.decodeObject(forKey: "title") as? String
          video = aDecoder.decodeObject(forKey: "video") as? Bool
-         voteAverage = aDecoder.decodeObject(forKey: "vote_average") as? Float
+         voteAverage = aDecoder.decodeObject(forKey: "vote_average") as? Double
          voteCount = aDecoder.decodeObject(forKey: "vote_count") as? Int
 
 	}

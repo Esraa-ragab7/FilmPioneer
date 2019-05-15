@@ -1,14 +1,14 @@
 //
-//	swiftMovies.swift
+//	Movies.swift
 //	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation
 
 
-class swiftMovies : NSObject, NSCoding{
+class Movies : NSObject, NSCoding{
 
 	var page : Int!
-	var results : [swiftResults]!
+	var results : [Results]!
 	var totalPages : Int!
 	var totalResults : Int!
 
@@ -18,10 +18,10 @@ class swiftMovies : NSObject, NSCoding{
 	 */
 	init(fromDictionary dictionary: [String:Any]){
 		page = dictionary["page"] as? Int
-		results = [swiftResults]()
+		results = [Results]()
 		if let resultsArray = dictionary["results"] as? [[String:Any]]{
 			for dic in resultsArray{
-				let value = swiftResults(fromDictionary: dic)
+				let value = Results(fromDictionary: dic)
 				results.append(value)
 			}
 		}
@@ -61,7 +61,7 @@ class swiftMovies : NSObject, NSCoding{
     @objc required init(coder aDecoder: NSCoder)
 	{
          page = aDecoder.decodeObject(forKey: "page") as? Int
-         results = aDecoder.decodeObject(forKey :"results") as? [swiftResults]
+         results = aDecoder.decodeObject(forKey :"results") as? [Results]
          totalPages = aDecoder.decodeObject(forKey: "total_pages") as? Int
          totalResults = aDecoder.decodeObject(forKey: "total_results") as? Int
 
