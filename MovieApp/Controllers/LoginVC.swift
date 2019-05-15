@@ -52,6 +52,7 @@ class LoginVC: BaseVC {
         NetworkManager.sharedInstance.serverRequests(url: "https://api.themoviedb.org/3/authentication/session/new?api_key=506b23ad4ef222b830bab9a275fa942c", method: .post, parameters: parameters, headers: headers, success: { (res) in
             self.enableButtonAndTextFields()
             AppDelegate.session_id = (res["session_id"] as! String)
+            self.performSegue(withIdentifier: "loginSuccess", sender: nil)
         }) { (error) in
             self.enableButtonAndTextFields()
             self.Alert(title: "Error!", message: error["status_message"] as? String ?? "Error", VC: self)
