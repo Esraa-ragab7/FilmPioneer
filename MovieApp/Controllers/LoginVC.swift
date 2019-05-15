@@ -49,7 +49,7 @@ class LoginVC: BaseVC {
         ]
         var headers = [requestHeaders]()
         headers.append(requestHeaders(key:"Content-Type",value:"application/json"))
-        NetworkManager.sharedInstance.serverRequests(url: "https://api.themoviedb.org/3/authentication/session/new?api_key=506b23ad4ef222b830bab9a275fa942c", method: .post, parameters: parameters, headers: headers, success: { (res) in
+        NetworkManager.sharedInstance.serverRequests(url: "https://api.themoviedb.org/3/authentication/session/new?api_key=\(Constants.api.api_key.rawValue)", method: .post, parameters: parameters, headers: headers, success: { (res) in
             self.enableButtonAndTextFields()
             AppDelegate.session_id = (res["session_id"] as! String)
             self.performSegue(withIdentifier: "loginSuccess", sender: nil)
@@ -67,7 +67,7 @@ class LoginVC: BaseVC {
             ]
         var headers = [requestHeaders]()
         headers.append(requestHeaders(key:"Content-Type",value:"application/json"))
-        NetworkManager.sharedInstance.serverRequests(url: "https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=506b23ad4ef222b830bab9a275fa942c", method: .post, parameters: parameters, headers: headers, success: { (res) in
+        NetworkManager.sharedInstance.serverRequests(url: "https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=\(Constants.api.api_key.rawValue)", method: .post, parameters: parameters, headers: headers, success: { (res) in
             self.getSessionId(request_token: res["request_token"] as! String)
         }) { (error) in
             self.enableButtonAndTextFields()
@@ -84,7 +84,7 @@ class LoginVC: BaseVC {
             enableButtonAndTextFields()
             Alert(title: "Complete", message: "Please Insert Your Password.", VC: self)
         } else if NetworkManager.sharedInstance.isConnected() {
-            NetworkManager.sharedInstance.serverRequests(url: "https://api.themoviedb.org/3/authentication/token/new?api_key=506b23ad4ef222b830bab9a275fa942c", method: .get, success: { (res) in
+            NetworkManager.sharedInstance.serverRequests(url: "https://api.themoviedb.org/3/authentication/token/new?api_key=\(Constants.api.api_key.rawValue)", method: .get, success: { (res) in
                 self.loginAction(request_token: res["request_token"] as! String)
             }) { (error) in
                 self.enableButtonAndTextFields()

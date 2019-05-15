@@ -24,6 +24,7 @@
 		F252B5EE228B10AC00FB9815 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5ED228B10AC00FB9815 /* NetworkManager.swift */; };
 		F252B5F0228C3F4200FB9815 /* ButtonExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5EF228C3F4200FB9815 /* ButtonExtention.swift */; };
 		F252B5F2228C51B300FB9815 /* TopRatedMoviesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5F1228C51B300FB9815 /* TopRatedMoviesVC.swift */; };
+		F2A7EB0F228C9B48008C6B49 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A7EB0E228C9B48008C6B49 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		F252B5ED228B10AC00FB9815 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F252B5EF228C3F4200FB9815 /* ButtonExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtention.swift; sourceTree = "<group>"; };
 		F252B5F1228C51B300FB9815 /* TopRatedMoviesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesVC.swift; sourceTree = "<group>"; };
+		F2A7EB0E228C9B48008C6B49 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 				F252B5E9228AF7B400FB9815 /* TextFieldExtention.swift */,
 				F252B5ED228B10AC00FB9815 /* NetworkManager.swift */,
 				F252B5EF228C3F4200FB9815 /* ButtonExtention.swift */,
+				F2A7EB0E228C9B48008C6B49 /* Constant.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				F252B5CC228ADFB000FB9815 /* PTColors.swift in Sources */,
 				F252B5EE228B10AC00FB9815 /* NetworkManager.swift in Sources */,
 				F22813F72289902200FCB9BC /* LoginVC.swift in Sources */,
+				F2A7EB0F228C9B48008C6B49 /* Constant.swift in Sources */,
 				F252B5EA228AF7B400FB9815 /* TextFieldExtention.swift in Sources */,
 				F22813F52289902200FCB9BC /* AppDelegate.swift in Sources */,
 			);
