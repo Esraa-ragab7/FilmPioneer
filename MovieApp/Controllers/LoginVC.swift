@@ -16,7 +16,7 @@ class LoginVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         userName.delegate = self
         password.delegate = self
         borderBottom(textField: userName, color: UIColor().underlineGray)
@@ -51,8 +51,9 @@ class LoginVC: BaseVC {
         headers.append(requestHeaders(key:"Content-Type",value:"application/json"))
         NetworkManager.sharedInstance.serverRequests(url: "https://api.themoviedb.org/3/authentication/session/new?api_key=\(Constants.api.api_key.rawValue)", method: .post, parameters: parameters, headers: headers, success: { (res) in
             self.enableButtonAndTextFields()
-            AppDelegate.session_id = (res["session_id"] as! String)
-            self.performSegue(withIdentifier: "loginSuccess", sender: nil)
+            let sessionID = (res["session_id"] as! String)
+            UserDefaults.standard.set(sessionID, forKey: "sessionID")
+            AppDelegate.shared.rootViewController.switchToMainScreen()
         }) { (error) in
             self.enableButtonAndTextFields()
             self.Alert(title: "Error!", message: error["status_message"] as? String ?? "Error", VC: self)

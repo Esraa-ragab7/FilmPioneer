@@ -49,10 +49,6 @@ class NetworkManager: NSObject {
             request.addValue(header.value, forHTTPHeaderField: header.key)
         }
         
-        if AppDelegate.session_id != nil{
-            request.addValue(AppDelegate.session_id!, forHTTPHeaderField: "Authorization")
-        }
-        
         if parameters.count > 0{
             let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: [])
             request.httpBody = httpBody

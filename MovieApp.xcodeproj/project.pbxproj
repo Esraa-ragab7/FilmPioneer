@@ -31,6 +31,8 @@
 		F2A7EB14228C9E5B008C6B49 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A7EB12228C9E5B008C6B49 /* Results.swift */; };
 		F2A7EB1A228CBDD5008C6B49 /* uiViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A7EB19228CBDD5008C6B49 /* uiViewExtention.swift */; };
 		F2E33BDC228CC9A4006AF116 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E33BDB228CC9A4006AF116 /* SplashScreen.storyboard */; };
+		F2E33BDE228CCA4E006AF116 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BDD228CCA4E006AF116 /* SplashScreen.swift */; };
+		F2E33BE0228CCE1C006AF116 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BDF228CCE1C006AF116 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		F2A7EB12228C9E5B008C6B49 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		F2A7EB19228CBDD5008C6B49 /* uiViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uiViewExtention.swift; sourceTree = "<group>"; };
 		F2E33BDB228CC9A4006AF116 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		F2E33BDD228CCA4E006AF116 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		F2E33BDF228CCE1C006AF116 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +224,8 @@
 				F22813F62289902200FCB9BC /* LoginVC.swift */,
 				F252B5EB228B006400FB9815 /* BaseVC.swift */,
 				F252B5F1228C51B300FB9815 /* TopRatedMoviesVC.swift */,
+				F2E33BDD228CCA4E006AF116 /* SplashScreen.swift */,
+				F2E33BDF228CCE1C006AF116 /* RootViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -492,11 +498,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2E33BDE228CCA4E006AF116 /* SplashScreen.swift in Sources */,
 				F2A7EB13228C9E5B008C6B49 /* Movies.swift in Sources */,
 				F252B5C9228ADFB000FB9815 /* TextField.swift in Sources */,
 				F2A7EB0D228C9520008C6B49 /* fullRawCell.swift in Sources */,
 				F2A7EB1A228CBDD5008C6B49 /* uiViewExtention.swift in Sources */,
 				F252B5EC228B006400FB9815 /* BaseVC.swift in Sources */,
+				F2E33BE0228CCE1C006AF116 /* RootViewController.swift in Sources */,
 				F252B5F0228C3F4200FB9815 /* ButtonExtention.swift in Sources */,
 				F252B5F2228C51B300FB9815 /* TopRatedMoviesVC.swift in Sources */,
 				F252B5CC228ADFB000FB9815 /* PTColors.swift in Sources */,
