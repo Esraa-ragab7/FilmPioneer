@@ -11,7 +11,7 @@
 		1F40A800576600EA150BBBA1 /* Pods_MovieAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5CE69D7F7A0F3DB83196FB /* Pods_MovieAppTests.framework */; };
 		9D0CB171CCB1B73C67331D0C /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6498B677602EC44F757C76 /* Pods_MovieApp.framework */; };
 		F22813F52289902200FCB9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22813F42289902200FCB9BC /* AppDelegate.swift */; };
-		F22813F72289902200FCB9BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22813F62289902200FCB9BC /* ViewController.swift */; };
+		F22813F72289902200FCB9BC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22813F62289902200FCB9BC /* LoginVC.swift */; };
 		F22813FA2289902200FCB9BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22813F82289902200FCB9BC /* Main.storyboard */; };
 		F22813FC2289902300FCB9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F22813FB2289902300FCB9BC /* Assets.xcassets */; };
 		F22813FF2289902300FCB9BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22813FD2289902300FCB9BC /* LaunchScreen.storyboard */; };
@@ -21,6 +21,8 @@
 		F252B5CC228ADFB000FB9815 /* PTColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5C1228ADFB000FB9815 /* PTColors.swift */; };
 		F252B5EA228AF7B400FB9815 /* TextFieldExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5E9228AF7B400FB9815 /* TextFieldExtention.swift */; };
 		F252B5EC228B006400FB9815 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5EB228B006400FB9815 /* BaseVC.swift */; };
+		F252B5EE228B10AC00FB9815 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5ED228B10AC00FB9815 /* NetworkManager.swift */; };
+		F252B5F0228C3F4200FB9815 /* ButtonExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252B5EF228C3F4200FB9815 /* ButtonExtention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,7 @@
 		C5FA54E06819A203895284E0 /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F22813F12289902200FCB9BC /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22813F42289902200FCB9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F22813F62289902200FCB9BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F22813F62289902200FCB9BC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F22813F92289902200FCB9BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F22813FB2289902300FCB9BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F22813FE2289902300FCB9BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +69,8 @@
 		F252B5C1228ADFB000FB9815 /* PTColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTColors.swift; sourceTree = "<group>"; };
 		F252B5E9228AF7B400FB9815 /* TextFieldExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtention.swift; sourceTree = "<group>"; };
 		F252B5EB228B006400FB9815 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		F252B5ED228B10AC00FB9815 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F252B5EF228C3F4200FB9815 /* ButtonExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +197,7 @@
 		F252B580228ADDE900FB9815 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F22813F62289902200FCB9BC /* ViewController.swift */,
+				F22813F62289902200FCB9BC /* LoginVC.swift */,
 				F252B5EB228B006400FB9815 /* BaseVC.swift */,
 			);
 			path = Controllers;
@@ -205,6 +209,8 @@
 				F252B5C1228ADFB000FB9815 /* PTColors.swift */,
 				F252B5BE228ADFB000FB9815 /* TextField.swift */,
 				F252B5E9228AF7B400FB9815 /* TextFieldExtention.swift */,
+				F252B5ED228B10AC00FB9815 /* NetworkManager.swift */,
+				F252B5EF228C3F4200FB9815 /* ButtonExtention.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -436,8 +442,10 @@
 			files = (
 				F252B5C9228ADFB000FB9815 /* TextField.swift in Sources */,
 				F252B5EC228B006400FB9815 /* BaseVC.swift in Sources */,
+				F252B5F0228C3F4200FB9815 /* ButtonExtention.swift in Sources */,
 				F252B5CC228ADFB000FB9815 /* PTColors.swift in Sources */,
-				F22813F72289902200FCB9BC /* ViewController.swift in Sources */,
+				F252B5EE228B10AC00FB9815 /* NetworkManager.swift in Sources */,
+				F22813F72289902200FCB9BC /* LoginVC.swift in Sources */,
 				F252B5EA228AF7B400FB9815 /* TextFieldExtention.swift in Sources */,
 				F22813F52289902200FCB9BC /* AppDelegate.swift in Sources */,
 			);
