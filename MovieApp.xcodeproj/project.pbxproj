@@ -30,6 +30,7 @@
 		F2A7EB13228C9E5B008C6B49 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A7EB11228C9E5B008C6B49 /* Movies.swift */; };
 		F2A7EB14228C9E5B008C6B49 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A7EB12228C9E5B008C6B49 /* Results.swift */; };
 		F2A7EB1A228CBDD5008C6B49 /* uiViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A7EB19228CBDD5008C6B49 /* uiViewExtention.swift */; };
+		F2E33BDC228CC9A4006AF116 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E33BDB228CC9A4006AF116 /* SplashScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		F2A7EB11228C9E5B008C6B49 /* Movies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		F2A7EB12228C9E5B008C6B49 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		F2A7EB19228CBDD5008C6B49 /* uiViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uiViewExtention.swift; sourceTree = "<group>"; };
+		F2E33BDB228CC9A4006AF116 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				F2A7EB1B228CC07D008C6B49 /* Cells */,
 				F22813F82289902200FCB9BC /* Main.storyboard */,
 				F22813FD2289902300FCB9BC /* LaunchScreen.storyboard */,
+				F2E33BDB228CC9A4006AF116 /* SplashScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				F22813FF2289902300FCB9BC /* LaunchScreen.storyboard in Resources */,
 				F2A7EB0C228C9520008C6B49 /* FullRawCell.xib in Resources */,
 				F22813FC2289902300FCB9BC /* Assets.xcassets in Resources */,
+				F2E33BDC228CC9A4006AF116 /* SplashScreen.storyboard in Resources */,
 				F22813FA2289902200FCB9BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
