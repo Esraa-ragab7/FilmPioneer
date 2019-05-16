@@ -36,6 +36,7 @@
 		F2E33BE7228CDF11006AF116 /* SubRawCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BE5228CDF11006AF116 /* SubRawCell.swift */; };
 		F2E33BE8228CDF11006AF116 /* SubRawCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E33BE6228CDF11006AF116 /* SubRawCell.xib */; };
 		F2E33BEA228CECE8006AF116 /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BE9228CECE8006AF116 /* MovieDetails.swift */; };
+		F2E33BEE228D031F006AF116 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BED228D031F006AF116 /* AccountVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		F2E33BE5228CDF11006AF116 /* SubRawCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubRawCell.swift; sourceTree = "<group>"; };
 		F2E33BE6228CDF11006AF116 /* SubRawCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubRawCell.xib; sourceTree = "<group>"; };
 		F2E33BE9228CECE8006AF116 /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
+		F2E33BED228D031F006AF116 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 				F2E33BDD228CCA4E006AF116 /* SplashScreen.swift */,
 				F2E33BDF228CCE1C006AF116 /* RootViewController.swift */,
 				F2E33BE9228CECE8006AF116 /* MovieDetails.swift */,
+				F2E33BED228D031F006AF116 /* AccountVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				F252B5EE228B10AC00FB9815 /* NetworkManager.swift in Sources */,
 				F2E33BE7228CDF11006AF116 /* SubRawCell.swift in Sources */,
 				F22813F72289902200FCB9BC /* LoginVC.swift in Sources */,
+				F2E33BEE228D031F006AF116 /* AccountVC.swift in Sources */,
 				F2A7EB0F228C9B48008C6B49 /* Constant.swift in Sources */,
 				F2A7EB14228C9E5B008C6B49 /* Results.swift in Sources */,
 				F252B5EA228AF7B400FB9815 /* TextFieldExtention.swift in Sources */,
