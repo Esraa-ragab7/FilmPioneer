@@ -276,6 +276,7 @@
                                             <constraint firstAttribute="height" constant="40" id="1fz-uN-G2l"/>
                                             <constraint firstAttribute="width" constant="40" id="DYM-U6-z0F"/>
                                         </constraints>
+                                        <inset key="contentEdgeInsets" minX="10" minY="15" maxX="10" maxY="5"/>
                                         <state key="normal" image="logOutIm"/>
                                         <connections>
                                             <action selector="gridDisplay:" destination="Ju8-D9-KCr" eventType="touchUpInside" id="SK5-zj-oXc"/>
@@ -371,6 +372,7 @@
                                             <constraint firstAttribute="height" constant="40" id="Bjc-Sl-44f"/>
                                             <constraint firstAttribute="width" constant="40" id="hnK-6o-9N0"/>
                                         </constraints>
+                                        <inset key="contentEdgeInsets" minX="10" minY="15" maxX="10" maxY="5"/>
                                         <state key="normal" image="grid"/>
                                         <connections>
                                             <action selector="gridDisplay:" destination="Ju8-D9-KCr" eventType="touchUpInside" id="id6-b9-BLT"/>
@@ -382,6 +384,7 @@
                                             <constraint firstAttribute="height" constant="40" id="MgJ-Cq-wcG"/>
                                             <constraint firstAttribute="width" constant="40" id="v7g-Vs-d7k"/>
                                         </constraints>
+                                        <inset key="contentEdgeInsets" minX="10" minY="15" maxX="10" maxY="5"/>
                                         <state key="normal" image="list"/>
                                         <connections>
                                             <action selector="listDisplay:" destination="Ju8-D9-KCr" eventType="touchUpInside" id="uze-cc-El7"/>
