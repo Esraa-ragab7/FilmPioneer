@@ -28,7 +28,7 @@ class Results : NSObject, NSCoding{
 	 */
 	init(fromDictionary dictionary: [String:Any]){
 		adult = dictionary["adult"] as? Bool
-		backdropPath = dictionary["backdrop_path"] as? String
+		backdropPath = "https://image.tmdb.org/t/p/w185/\(dictionary["backdrop_path"] as? String ?? "")"
 		genreIds = dictionary["genre_ids"] as? [Int]
 		id = dictionary["id"] as? Int
 		originalLanguage = dictionary["original_language"] as? String
