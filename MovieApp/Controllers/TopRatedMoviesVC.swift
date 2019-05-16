@@ -22,6 +22,7 @@ class TopRatedMoviesVC: BaseVC, UICollectionViewDelegate, UICollectionViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        MoviesSQLiteDataBase.MovieDatabase.createMoviesDataBase()
         topRatedMoviesCollectionView.register(UINib(nibName: "FullRawCell", bundle: nil), forCellWithReuseIdentifier: "FullRawCell")
         topRatedMoviesCollectionView.register(UINib(nibName: "SubRawCell", bundle: nil), forCellWithReuseIdentifier: "SubRawCell")
         
@@ -100,6 +101,32 @@ class TopRatedMoviesVC: BaseVC, UICollectionViewDelegate, UICollectionViewDataSo
         return cell
     }
     
+    //MARK: - Database Connect
+    func insertMoviesInsideSQLDatabase(movies: [Results]){
+        if pageNum == 1 {
+            MoviesSQLiteDataBase.MovieDatabase.deleteAllMovies()
+        }
+        for movie in movies {
+            MoviesSQLiteDataBase.MovieDatabase.addMovieToMovies(movie: movie)
+        }
+//        MoviesSQLiteDataBase.MovieDatabase.addMovieToMovies(movie: movies[0])
+    }
+    
+    func getMoviesFromDataBase(message: String){
+        if MoviesSQLiteDataBase.MovieDatabase.selectAllMovies() != [] {
+            self.results = MoviesSQLiteDataBase.MovieDatabase.selectAllMovies()
+            self.reloadButton.isHidden = true
+            self.isWating = false
+            self.topRatedMoviesCollectionView.reloadData()
+            self.loadingIndicator.stopAnimating()
+        } else {
+            reloadButton.isHidden = self.pageNum == 1 ? false : true
+            self.pageNum == 1 ? Alert(title: "Error!", message: message, VC: self): nil
+            loadingIndicator.stopAnimating()
+        }
+    }
+    
+    // MARK: - API Call
     func callApiGetMovies(){
         self.reloadButton.isHidden = true
         if pageNum > totalPages {
@@ -111,21 +138,17 @@ class TopRatedMoviesVC: BaseVC, UICollectionViewDelegate, UICollectionViewDataSo
             NetworkManager.sharedInstance.serverRequests(url: "https://api.themoviedb.org/3/movie/top_rated?api_key=\(Constants.api.api_key.rawValue)&language=en-US&page=\(pageNum)", success: { (res) in
                 let moviesDic = Movies.init(fromDictionary: res)
                 self.results.append(contentsOf: moviesDic.results)
+                self.insertMoviesInsideSQLDatabase(movies: moviesDic.results)
                 self.totalPages = moviesDic.totalPages
                 self.isWating = false
                 self.topRatedMoviesCollectionView.reloadData()
                 self.loadingIndicator.stopAnimating()
                 self.reloadButton.isHidden = true
             }) { (error) in
-                self.loadingIndicator.stopAnimating()
-                
-                self.reloadButton.isHidden = self.pageNum == 1 ? false : true
-                self.Alert(title: "Error!", message: error["status_message"] as? String ?? "Error", VC: self)
+                self.getMoviesFromDataBase(message: error["status_message"] as? String ?? "Error")
             }
         } else {
-            reloadButton.isHidden = self.pageNum == 1 ? false : true
-            self.pageNum == 1 ? Alert(title: "Error!", message: "Please Connect to the Internet..", VC: self): nil
-            loadingIndicator.stopAnimating()
+            getMoviesFromDataBase(message: "Please Connect to the Internet..")
         }
     }
     

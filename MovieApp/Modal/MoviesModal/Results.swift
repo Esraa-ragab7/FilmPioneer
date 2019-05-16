@@ -29,6 +29,9 @@ class Results : NSObject, NSCoding{
 	init(fromDictionary dictionary: [String:Any]){
 		adult = dictionary["adult"] as? Bool
 		backdropPath = "https://image.tmdb.org/t/p/w185/\(dictionary["backdrop_path"] as? String ?? "")"
+        if dictionary["backdrop"] as? String != nil {
+            backdropPath = (dictionary["backdrop"] as! String)
+        }
 		genreIds = dictionary["genre_ids"] as? [Int]
 		id = dictionary["id"] as? Int
 		originalLanguage = dictionary["original_language"] as? String
@@ -36,6 +39,9 @@ class Results : NSObject, NSCoding{
 		overview = dictionary["overview"] as? String
 		popularity = dictionary["popularity"] as? Float
         posterPath = "https://image.tmdb.org/t/p/w185/\(dictionary["poster_path"] as? String ?? "")"
+        if dictionary["poster"] as? String != nil {
+            posterPath = (dictionary["poster"] as! String)
+        }
 		releaseDate = dictionary["release_date"] as? String
 		title = dictionary["title"] as? String
 		video = dictionary["video"] as? Bool
