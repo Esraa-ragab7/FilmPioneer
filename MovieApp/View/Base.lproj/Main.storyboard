@@ -10,16 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SplashScreen-->
-        <scene sceneID="Th0-Jo-cx4">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SplashScreen" id="Pbu-lA-Mg8" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="XVS-y8-Ski"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZMZ-o1-3lS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1258" y="40"/>
-        </scene>
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -182,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j5L-Em-z3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2644" y="373"/>
+            <point key="canvasLocation" x="2926" y="350"/>
         </scene>
         <!--Top Rated MoviesVC-->
         <scene sceneID="YNc-W3-hDb">
@@ -195,7 +185,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GY6-hi-DRF">
                                 <rect key="frame" x="0.0" y="70" width="375" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="uwR-0y-loa">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="20" id="uwR-0y-loa">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -218,9 +208,47 @@
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6j-el-Xo9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
-                                <color key="backgroundColor" red="0.39037570510000003" green="0.0" blue="0.97201412669999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWT-f4-mNn">
+                                        <rect key="frame" x="315" y="25" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Bjc-Sl-44f"/>
+                                            <constraint firstAttribute="width" constant="40" id="hnK-6o-9N0"/>
+                                        </constraints>
+                                        <state key="normal" image="grid"/>
+                                        <connections>
+                                            <action selector="gridDisplay:" destination="Ju8-D9-KCr" eventType="touchUpInside" id="id6-b9-BLT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPl-gA-NII">
+                                        <rect key="frame" x="265" y="25" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="MgJ-Cq-wcG"/>
+                                            <constraint firstAttribute="width" constant="40" id="v7g-Vs-d7k"/>
+                                        </constraints>
+                                        <state key="normal" image="list"/>
+                                        <connections>
+                                            <action selector="listDisplay:" destination="Ju8-D9-KCr" eventType="touchUpInside" id="uze-cc-El7"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txf-nL-HBg">
+                                        <rect key="frame" x="0.0" y="69" width="375" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="QSn-rA-gyI"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="txf-nL-HBg" secondAttribute="bottom" id="2a3-c0-wrS"/>
+                                    <constraint firstAttribute="trailing" secondItem="kWT-f4-mNn" secondAttribute="trailing" constant="20" id="3tH-5F-97G"/>
                                     <constraint firstAttribute="height" constant="70" id="M6f-2d-2l9"/>
+                                    <constraint firstItem="kWT-f4-mNn" firstAttribute="leading" secondItem="cPl-gA-NII" secondAttribute="trailing" constant="10" id="O8k-Ke-PwU"/>
+                                    <constraint firstAttribute="trailing" secondItem="txf-nL-HBg" secondAttribute="trailing" id="SAF-pr-lfg"/>
+                                    <constraint firstItem="txf-nL-HBg" firstAttribute="leading" secondItem="S6j-el-Xo9" secondAttribute="leading" id="W1L-q8-Vz0"/>
+                                    <constraint firstAttribute="bottom" secondItem="kWT-f4-mNn" secondAttribute="bottom" constant="5" id="WpL-NI-Mph"/>
+                                    <constraint firstAttribute="bottom" secondItem="cPl-gA-NII" secondAttribute="bottom" constant="5" id="frl-5f-XHn"/>
                                 </constraints>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xPY-OH-3cQ">
@@ -264,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESg-mE-ED3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2644" y="-291.00449775112446"/>
+            <point key="canvasLocation" x="2925.5999999999999" y="-300"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RkR-CW-52L">
@@ -283,11 +311,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUp-8N-x37" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1169" y="533"/>
+            <point key="canvasLocation" x="1833" y="5"/>
         </scene>
     </scenes>
     <resources>
         <image name="GearBlack" width="200" height="200"/>
         <image name="closeEye" width="200" height="200"/>
+        <image name="grid" width="512" height="512"/>
+        <image name="list" width="512" height="512"/>
     </resources>
 </document>

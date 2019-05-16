@@ -18,10 +18,12 @@ class TopRatedMoviesVC: BaseVC, UICollectionViewDelegate, UICollectionViewDataSo
     var totalPages = 1
     var isWating = false
     var results : [Results] = []
+    var list = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         topRatedMoviesCollectionView.register(UINib(nibName: "FullRawCell", bundle: nil), forCellWithReuseIdentifier: "FullRawCell")
+        topRatedMoviesCollectionView.register(UINib(nibName: "SubRawCell", bundle: nil), forCellWithReuseIdentifier: "SubRawCell")
         
     }
     
@@ -39,10 +41,24 @@ class TopRatedMoviesVC: BaseVC, UICollectionViewDelegate, UICollectionViewDataSo
         callApiGetMovies()
     }
     
+    @IBAction func gridDisplay(_ sender: Any) {
+        list = false
+        topRatedMoviesCollectionView.reloadData()
+    }
+    
+    @IBAction func listDisplay(_ sender: Any) {
+        list = true
+        topRatedMoviesCollectionView.reloadData()
+    }
+    
     // MARK: - collection View Delegate FlowLayout Methods
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width - 40, height: 110)
+        if list {
+            return CGSize(width: collectionView.frame.width - 40, height: 110)
+        } else {
+            return CGSize(width: (collectionView.frame.width - 60)/2, height: 230)
+        }
     }
     
     // MARK: - collection View Delegate Methods
@@ -70,7 +86,7 @@ class TopRatedMoviesVC: BaseVC, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FullRawCell", for: indexPath) as! fullRawCell
+        let cell = list ? collectionView.dequeueReusableCell(withReuseIdentifier: "FullRawCell", for: indexPath) as! fullRawCell : collectionView.dequeueReusableCell(withReuseIdentifier: "SubRawCell", for: indexPath) as! SubRawCell
         let item = results[indexPath.row]
         cell.layer.shadowOffset = CGSize(width: 0, height: 1)
         cell.layer.shadowRadius = 8
@@ -79,7 +95,8 @@ class TopRatedMoviesVC: BaseVC, UICollectionViewDelegate, UICollectionViewDataSo
         cell.layer.masksToBounds = false
         cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
 
-        cell.displayData(title: item.title, average: "\(item.voteAverage!)", date: item.releaseDate, posterImage: item.posterPath)
+        (cell as? fullRawCell)?.displayData(title: item.title, average: "\(item.voteAverage!)", date: item.releaseDate, posterImage: item.posterPath)
+        (cell as? SubRawCell)?.displayData(title: item.title, average: "\(item.voteAverage!)", date: item.releaseDate, posterImage: item.posterPath)
         return cell
     }
     

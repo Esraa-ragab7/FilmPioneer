@@ -8,10 +8,17 @@
 import UIKit
 
 class SubRawCell: UICollectionViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var posterImage: UIImageView!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var average: UILabel!
+    @IBOutlet weak var date: UILabel!
+    
+    func displayData(title: String, average: String, date: String, posterImage: String){
+        self.title.text = title
+        self.average.text = average
+        self.date.text = date
+        self.posterImage.kf.indicatorType = .activity
+        self.posterImage.kf.setImage(with: URL(string: posterImage), placeholder: #imageLiteral(resourceName: "placeholder"))
     }
-
+    
 }

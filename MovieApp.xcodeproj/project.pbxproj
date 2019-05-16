@@ -33,6 +33,8 @@
 		F2E33BDC228CC9A4006AF116 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E33BDB228CC9A4006AF116 /* SplashScreen.storyboard */; };
 		F2E33BDE228CCA4E006AF116 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BDD228CCA4E006AF116 /* SplashScreen.swift */; };
 		F2E33BE0228CCE1C006AF116 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BDF228CCE1C006AF116 /* RootViewController.swift */; };
+		F2E33BE7228CDF11006AF116 /* SubRawCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BE5228CDF11006AF116 /* SubRawCell.swift */; };
+		F2E33BE8228CDF11006AF116 /* SubRawCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E33BE6228CDF11006AF116 /* SubRawCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		F2E33BDB228CC9A4006AF116 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		F2E33BDD228CCA4E006AF116 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		F2E33BDF228CCE1C006AF116 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		F2E33BE5228CDF11006AF116 /* SubRawCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubRawCell.swift; sourceTree = "<group>"; };
+		F2E33BE6228CDF11006AF116 /* SubRawCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubRawCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				F2A7EB0B228C9520008C6B49 /* fullRawCell.swift */,
+				F2E33BE5228CDF11006AF116 /* SubRawCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 		F2A7EB1B228CC07D008C6B49 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F2E33BE6228CDF11006AF116 /* SubRawCell.xib */,
 				F2A7EB0A228C9520008C6B49 /* FullRawCell.xib */,
 			);
 			path = Cells;
@@ -379,6 +385,7 @@
 				F22813FF2289902300FCB9BC /* LaunchScreen.storyboard in Resources */,
 				F2A7EB0C228C9520008C6B49 /* FullRawCell.xib in Resources */,
 				F22813FC2289902300FCB9BC /* Assets.xcassets in Resources */,
+				F2E33BE8228CDF11006AF116 /* SubRawCell.xib in Resources */,
 				F2E33BDC228CC9A4006AF116 /* SplashScreen.storyboard in Resources */,
 				F22813FA2289902200FCB9BC /* Main.storyboard in Resources */,
 			);
@@ -509,6 +516,7 @@
 				F252B5F2228C51B300FB9815 /* TopRatedMoviesVC.swift in Sources */,
 				F252B5CC228ADFB000FB9815 /* PTColors.swift in Sources */,
 				F252B5EE228B10AC00FB9815 /* NetworkManager.swift in Sources */,
+				F2E33BE7228CDF11006AF116 /* SubRawCell.swift in Sources */,
 				F22813F72289902200FCB9BC /* LoginVC.swift in Sources */,
 				F2A7EB0F228C9B48008C6B49 /* Constant.swift in Sources */,
 				F2A7EB14228C9E5B008C6B49 /* Results.swift in Sources */,
