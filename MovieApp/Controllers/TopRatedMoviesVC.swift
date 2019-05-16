@@ -64,7 +64,7 @@ class TopRatedMoviesVC: BaseVC, UICollectionViewDelegate, UICollectionViewDataSo
     // MARK: - collection View Delegate Methods
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        callApiGetMovies()
+        performSegue(withIdentifier: "movieDetails", sender: indexPath.row)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -126,6 +126,14 @@ class TopRatedMoviesVC: BaseVC, UICollectionViewDelegate, UICollectionViewDataSo
             reloadButton.isHidden = self.pageNum == 1 ? false : true
             self.pageNum == 1 ? Alert(title: "Error!", message: "Please Connect to the Internet..", VC: self): nil
             loadingIndicator.stopAnimating()
+        }
+    }
+    
+    // MARK: - prepae Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "movieDetails" {
+            let dest = segue.destination as! MovieDetails
+            dest.movie = results[sender as! Int]
         }
     }
 }
