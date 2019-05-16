@@ -30,6 +30,7 @@
 		F2A7EB13228C9E5B008C6B49 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A7EB11228C9E5B008C6B49 /* Movies.swift */; };
 		F2A7EB14228C9E5B008C6B49 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A7EB12228C9E5B008C6B49 /* Results.swift */; };
 		F2A7EB1A228CBDD5008C6B49 /* uiViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A7EB19228CBDD5008C6B49 /* uiViewExtention.swift */; };
+		F2C8870E228D9CC80036E7BC /* MoviesSQLiteDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C8870D228D9CC80036E7BC /* MoviesSQLiteDataBase.swift */; };
 		F2E33BDC228CC9A4006AF116 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E33BDB228CC9A4006AF116 /* SplashScreen.storyboard */; };
 		F2E33BDE228CCA4E006AF116 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BDD228CCA4E006AF116 /* SplashScreen.swift */; };
 		F2E33BE0228CCE1C006AF116 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BDF228CCE1C006AF116 /* RootViewController.swift */; };
@@ -93,6 +94,7 @@
 		F2A7EB11228C9E5B008C6B49 /* Movies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		F2A7EB12228C9E5B008C6B49 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		F2A7EB19228CBDD5008C6B49 /* uiViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uiViewExtention.swift; sourceTree = "<group>"; };
+		F2C8870D228D9CC80036E7BC /* MoviesSQLiteDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSQLiteDataBase.swift; sourceTree = "<group>"; };
 		F2E33BDB228CC9A4006AF116 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		F2E33BDD228CCA4E006AF116 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		F2E33BDF228CCE1C006AF116 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				F252B5ED228B10AC00FB9815 /* NetworkManager.swift */,
 				F252B5EF228C3F4200FB9815 /* ButtonExtention.swift */,
 				F2A7EB0E228C9B48008C6B49 /* Constant.swift */,
+				F2C8870D228D9CC80036E7BC /* MoviesSQLiteDataBase.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				F252B5EA228AF7B400FB9815 /* TextFieldExtention.swift in Sources */,
 				F22813F52289902200FCB9BC /* AppDelegate.swift in Sources */,
 				F2E33BEA228CECE8006AF116 /* MovieDetails.swift in Sources */,
+				F2C8870E228D9CC80036E7BC /* MoviesSQLiteDataBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
