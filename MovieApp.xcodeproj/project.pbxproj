@@ -35,6 +35,7 @@
 		F2E33BE0228CCE1C006AF116 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BDF228CCE1C006AF116 /* RootViewController.swift */; };
 		F2E33BE7228CDF11006AF116 /* SubRawCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BE5228CDF11006AF116 /* SubRawCell.swift */; };
 		F2E33BE8228CDF11006AF116 /* SubRawCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E33BE6228CDF11006AF116 /* SubRawCell.xib */; };
+		F2E33BEA228CECE8006AF116 /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BE9228CECE8006AF116 /* MovieDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		F2E33BDF228CCE1C006AF116 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F2E33BE5228CDF11006AF116 /* SubRawCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubRawCell.swift; sourceTree = "<group>"; };
 		F2E33BE6228CDF11006AF116 /* SubRawCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubRawCell.xib; sourceTree = "<group>"; };
+		F2E33BE9228CECE8006AF116 /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 				F252B5F1228C51B300FB9815 /* TopRatedMoviesVC.swift */,
 				F2E33BDD228CCA4E006AF116 /* SplashScreen.swift */,
 				F2E33BDF228CCE1C006AF116 /* RootViewController.swift */,
+				F2E33BE9228CECE8006AF116 /* MovieDetails.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				F2A7EB14228C9E5B008C6B49 /* Results.swift in Sources */,
 				F252B5EA228AF7B400FB9815 /* TextFieldExtention.swift in Sources */,
 				F22813F52289902200FCB9BC /* AppDelegate.swift in Sources */,
+				F2E33BEA228CECE8006AF116 /* MovieDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
