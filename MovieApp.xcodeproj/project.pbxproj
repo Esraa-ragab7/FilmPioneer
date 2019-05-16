@@ -37,6 +37,7 @@
 		F2E33BE8228CDF11006AF116 /* SubRawCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E33BE6228CDF11006AF116 /* SubRawCell.xib */; };
 		F2E33BEA228CECE8006AF116 /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BE9228CECE8006AF116 /* MovieDetails.swift */; };
 		F2E33BEE228D031F006AF116 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BED228D031F006AF116 /* AccountVC.swift */; };
+		F2E33BF0228D0D4F006AF116 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BEF228D0D4F006AF116 /* Account.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		F2E33BE6228CDF11006AF116 /* SubRawCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubRawCell.xib; sourceTree = "<group>"; };
 		F2E33BE9228CECE8006AF116 /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
 		F2E33BED228D031F006AF116 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
+		F2E33BEF228D0D4F006AF116 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				F2A7EB10228C9E45008C6B49 /* MoviesModal */,
+				F2E33BEF228D0D4F006AF116 /* Account.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2E33BF0228D0D4F006AF116 /* Account.swift in Sources */,
 				F2E33BDE228CCA4E006AF116 /* SplashScreen.swift in Sources */,
 				F2A7EB13228C9E5B008C6B49 /* Movies.swift in Sources */,
 				F252B5C9228ADFB000FB9815 /* TextField.swift in Sources */,
