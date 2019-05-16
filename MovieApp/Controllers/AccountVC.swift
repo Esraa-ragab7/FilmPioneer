@@ -83,22 +83,23 @@ class AccountVC: BaseVC {
     }
     
     @IBAction func logOut(_ sender: Any) {
-        if NetworkManager.sharedInstance.isConnected() {
-            let parameters = [
-                "session_id": UserDefaults.standard.string(forKey: "sessionID")
-            ]
-            var headers = [requestHeaders]()
-            headers.append(requestHeaders(key:"Content-Type",value:"application/json"))
-            
-            NetworkManager.sharedInstance.serverRequests(url: "https://api.themoviedb.org/3/authentication/session?api_key=\(Constants.api.api_key.rawValue)", method: .delete, parameters: parameters as [String : Any], headers: headers, success: { (res) in
-                AppDelegate.shared.rootViewController.switchToLogout()
-            }) { (error) in
-                self.Alert(title: "Error!", message: error["status_message"] as? String ?? "Error", VC: self)
+        AlertWith2ButtonsAndActionFirstButton(title: "😞", message: "you want to logOut ?", VC: self, B1Action: {
+            if NetworkManager.sharedInstance.isConnected() {
+                let parameters = [
+                    "session_id": UserDefaults.standard.string(forKey: "sessionID")
+                ]
+                var headers = [requestHeaders]()
+                headers.append(requestHeaders(key:"Content-Type",value:"application/json"))
+                
+                NetworkManager.sharedInstance.serverRequests(url: "https://api.themoviedb.org/3/authentication/session?api_key=\(Constants.api.api_key.rawValue)", method: .delete, parameters: parameters as [String : Any], headers: headers, success: { (res) in
+                    AppDelegate.shared.rootViewController.switchToLogout()
+                }) { (error) in
+                    self.Alert(title: "Error!", message: error["status_message"] as? String ?? "Error", VC: self)
+                }
+            } else {
+                self.Alert(title: "Error!", message: "Please Connect to the Internet..", VC: self)
             }
-        } else {
-            Alert(title: "Error!", message: "Please Connect to the Internet..", VC: self)
-        }
+        }, B1Title: "YES", B2Title: "NO")
     }
-    
 
 }
