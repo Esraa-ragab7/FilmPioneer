@@ -39,9 +39,12 @@ class AccountVC: BaseVC {
                 self.setUpData()
                 self.successCall()
             }) { (error) in
-                if let profileData = UserDefaults.standard.dictionary(forKey: "profile") {
+                if error["status_code"] as? Int == 3 {
+                    self.logOut()
+                } else if let profileData = UserDefaults.standard.dictionary(forKey: "profile") {
                     self.profile = Account.init(fromDictionary: profileData)
                     self.setUpData()
+                    self.successCall()
                 } else {
                     self.faildCall()
                     self.Alert(title: "Error!", message: error["status_message"] as? String ?? "Error", VC: self)
@@ -92,7 +95,7 @@ class AccountVC: BaseVC {
                 headers.append(requestHeaders(key:"Content-Type",value:"application/json"))
                 
                 NetworkManager.sharedInstance.serverRequests(url: "https://api.themoviedb.org/3/authentication/session?api_key=\(Constants.api.api_key.rawValue)", method: .delete, parameters: parameters as [String : Any], headers: headers, success: { (res) in
-                    AppDelegate.shared.rootViewController.switchToLogout()
+                    self.logOut()
                 }) { (error) in
                     self.Alert(title: "Error!", message: error["status_message"] as? String ?? "Error", VC: self)
                 }
@@ -102,4 +105,10 @@ class AccountVC: BaseVC {
         }, B1Title: "YES", B2Title: "NO")
     }
 
+    // MARK: - LogOut
+    func logOut(){
+        UserDefaults.standard.removeObject(forKey: "sessionID")
+        UserDefaults.standard.removeObject(forKey: "profile")
+        AppDelegate.shared.rootViewController.switchToLogout()
+    }
 }
