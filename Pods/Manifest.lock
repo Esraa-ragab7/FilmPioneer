@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.8.1)
   - Kingfisher (5.1.0)
+  - ViewAnimator (2.2.2)
 
 DEPENDENCIES:
   - Alamofire
   - Kingfisher
+  - ViewAnimator
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Kingfisher
+    - ViewAnimator
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
+  ViewAnimator: 6eaa112663b6a2d9e6b2573df65b416dd051cbe4
 
-PODFILE CHECKSUM: c8664415a4a1dd0a8820681bcf9ade5bb3638f0d
+PODFILE CHECKSUM: 317283dc71507c4834b7cfbf4df6f49124c4eefd
 
 COCOAPODS: 1.5.3

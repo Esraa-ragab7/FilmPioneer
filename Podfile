@@ -6,6 +6,8 @@ target 'MovieApp' do
   use_frameworks!
   pod 'Alamofire'
   pod 'Kingfisher'
+  pod 'ViewAnimator'
+
   # Pods for MovieApp
 
   target 'MovieAppTests' do
