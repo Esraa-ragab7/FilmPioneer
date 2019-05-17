@@ -8,19 +8,23 @@
 import UIKit
 import Kingfisher
 
-class fullRawCell: UICollectionViewCell {
+class FullRawCell: UICollectionViewCell {
     
-    @IBOutlet weak var posterImage: UIImageView!
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var average: UILabel!
-    @IBOutlet weak var date: UILabel!
+    // MARK: - IBOutlets
     
-    func displayData(title: String, average: String, date: String, posterImage: String){
+    @IBOutlet private weak var posterImage: UIImageView!
+    @IBOutlet private weak var title: UILabel!
+    @IBOutlet private weak var average: UILabel!
+    @IBOutlet private weak var date: UILabel!
+    
+    // MARK: - Functions
+    
+    func configureCell(title: String, average: String, date: String, posterImage: String){
         self.title.text = title
         self.average.text = average
         self.date.text = date
         self.posterImage.kf.indicatorType = .activity
         self.posterImage.kf.setImage(with: URL(string: posterImage), placeholder: #imageLiteral(resourceName: "placeholder"))
     }
-
+    
 }

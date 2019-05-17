@@ -8,15 +8,23 @@
 import UIKit
 
 class SplashScreen: UIViewController {
-
+    
+    // MARK: - Properties
+    
+    private let splashScreenTimerLenght: Int = 2
+    
+    // MARK: - ViewController Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         counter()
-        // Do any additional setup after loading the view.
     }
     
-    private func counter(){
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(2)) {
+    // MARK: Functions
+    
+    private func counter() {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(splashScreenTimerLenght)) {
             if UserDefaults.standard.string(forKey: "sessionID") != nil {
                 AppDelegate.shared.rootViewController.switchToMainScreen()
             } else {

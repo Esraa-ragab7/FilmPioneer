@@ -8,8 +8,10 @@
 import UIKit
 import Kingfisher
 
-class MovieDetails: UIViewController {
-    // MARK: - outlets
+class MovieDetailsViewController: UIViewController {
+    
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var bacGImage: UIImageView!
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var titleText: UILabel!
@@ -17,8 +19,11 @@ class MovieDetails: UIViewController {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var overView: UILabel!
     
-    // MARK: - variables
+    // MARK: - Properties
+    
     var movie : Results!
+    
+    // MARK: - ViewController Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +38,9 @@ class MovieDetails: UIViewController {
         overView.text = movie.overview
     }
     
-    // MARK: - buttons Action
+    // MARK: - IBActions
     
-    @IBAction func back(_ sender: Any) {
+    @IBAction private func back(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     

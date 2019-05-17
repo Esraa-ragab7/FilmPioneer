@@ -58,7 +58,7 @@ class NetworkManager: NSObject {
         }
         
         Alamofire.request(request).responseData{ response in
-            print(response.response?.statusCode)
+//            print(response.response?.statusCode)
             if response.response?.statusCode == 200 || response.response?.statusCode == 201{
                 do {
                     let readableJson = try JSONSerialization.jsonObject(with: response.data!, options: .allowFragments)

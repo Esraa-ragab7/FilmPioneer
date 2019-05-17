@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LoginVC-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LoginScreen" id="BYZ-38-t0r" customClass="LoginVC" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginScreen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,9 +123,13 @@
                                     <constraint firstItem="G5h-bW-w3V" firstAttribute="leading" secondItem="w6I-2N-sCJ" secondAttribute="leading" id="NNo-Np-XOz"/>
                                     <constraint firstItem="9YM-eR-Sox" firstAttribute="top" secondItem="OQy-ae-bZO" secondAttribute="bottom" constant="50" id="Qq0-iw-XIx"/>
                                     <constraint firstItem="YJQ-AC-R9i" firstAttribute="leading" secondItem="w6I-2N-sCJ" secondAttribute="leading" id="Vlg-9e-nAZ"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OQy-ae-bZO" secondAttribute="trailing" constant="20" symbolic="YES" id="WCm-75-9Es"/>
                                     <constraint firstAttribute="trailing" secondItem="588-qR-aEE" secondAttribute="trailing" id="WM9-yP-ujm"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="se7-Fy-SyI" secondAttribute="trailing" constant="20" symbolic="YES" id="asi-Sh-rSx"/>
                                     <constraint firstItem="YJQ-AC-R9i" firstAttribute="top" secondItem="wfp-Cq-DUu" secondAttribute="bottom" constant="5" id="b76-md-rhQ"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wfp-Cq-DUu" secondAttribute="trailing" constant="20" symbolic="YES" id="bw9-Dq-amf"/>
                                     <constraint firstItem="588-qR-aEE" firstAttribute="top" secondItem="YJQ-AC-R9i" secondAttribute="bottom" constant="50" id="csn-fX-H4X"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9YM-eR-Sox" secondAttribute="trailing" constant="20" symbolic="YES" id="efW-aJ-PDw"/>
                                     <constraint firstItem="588-qR-aEE" firstAttribute="leading" secondItem="w6I-2N-sCJ" secondAttribute="leading" id="geA-tu-2R3"/>
                                     <constraint firstItem="wfp-Cq-DUu" firstAttribute="top" secondItem="I2p-6p-8V2" secondAttribute="bottom" constant="20" id="oWd-cY-kYB"/>
                                     <constraint firstAttribute="trailing" secondItem="I2p-6p-8V2" secondAttribute="trailing" id="qXE-a2-bFP"/>
@@ -161,7 +165,7 @@
         <!--Account-->
         <scene sceneID="RjD-bg-q9d">
             <objects>
-                <viewController id="ZOS-mQ-yKj" customClass="AccountVC" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZOS-mQ-yKj" customClass="AccountViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="74x-dI-G8Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,7 +178,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </activityIndicatorView>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3i-SD-46M">
-                                        <rect key="frame" x="30" y="110" width="315" height="30"/>
+                                        <rect key="frame" x="30" y="110" width="95" height="30"/>
                                         <state key="normal" title="Reload Profile"/>
                                         <connections>
                                             <action selector="reloadProfile:" destination="ZOS-mQ-yKj" eventType="touchUpInside" id="mnh-yT-ynS"/>
@@ -213,6 +217,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="8GI-g9-yF5" firstAttribute="leading" secondItem="i4Q-Bt-ONO" secondAttribute="leading" id="5j5-OP-dh4"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8GI-g9-yF5" secondAttribute="trailing" constant="20" symbolic="YES" id="VvU-ny-ajX"/>
                                                     <constraint firstAttribute="trailing" secondItem="SXg-iO-Kbt" secondAttribute="trailing" constant="20" id="Zmj-W9-OuW"/>
                                                     <constraint firstItem="8GI-g9-yF5" firstAttribute="top" secondItem="i4Q-Bt-ONO" secondAttribute="top" id="fsf-Op-jmp"/>
                                                     <constraint firstItem="SXg-iO-Kbt" firstAttribute="leading" secondItem="i4Q-Bt-ONO" secondAttribute="leading" constant="20" id="h1A-ul-8vz"/>
@@ -238,6 +243,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="mMY-RY-yj0" firstAttribute="top" secondItem="Waw-qk-3T7" secondAttribute="top" id="FLL-Xx-gsv"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mMY-RY-yj0" secondAttribute="trailing" constant="20" symbolic="YES" id="TxE-Na-FIF"/>
                                                     <constraint firstItem="mMY-RY-yj0" firstAttribute="leading" secondItem="Waw-qk-3T7" secondAttribute="leading" id="Wby-5l-niG"/>
                                                     <constraint firstItem="Aja-bs-z0x" firstAttribute="top" secondItem="mMY-RY-yj0" secondAttribute="bottom" constant="5" id="Yju-HC-NGP"/>
                                                     <constraint firstItem="Aja-bs-z0x" firstAttribute="leading" secondItem="Waw-qk-3T7" secondAttribute="leading" constant="20" id="dbR-76-OAm"/>
@@ -262,7 +268,7 @@
                                 <constraints>
                                     <constraint firstItem="pyf-v8-M3c" firstAttribute="leading" secondItem="GDS-Kz-5fR" secondAttribute="leading" id="LK4-OZ-v5k"/>
                                     <constraint firstItem="A3i-SD-46M" firstAttribute="leading" secondItem="GDS-Kz-5fR" secondAttribute="leading" constant="30" id="goX-hT-4Gi"/>
-                                    <constraint firstAttribute="trailing" secondItem="A3i-SD-46M" secondAttribute="trailing" constant="30" id="hGg-dE-uD3"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="A3i-SD-46M" secondAttribute="trailing" symbolic="YES" id="hGg-dE-uD3"/>
                                     <constraint firstAttribute="bottom" secondItem="pyf-v8-M3c" secondAttribute="bottom" id="sdi-pD-pPd"/>
                                     <constraint firstAttribute="trailing" secondItem="pyf-v8-M3c" secondAttribute="trailing" id="wxf-HZ-Eg0"/>
                                 </constraints>
@@ -331,10 +337,10 @@
             </objects>
             <point key="canvasLocation" x="2925.5999999999999" y="354.87256371814095"/>
         </scene>
-        <!--Top Rated MoviesVC-->
+        <!--Top Rated Movies View Controller-->
         <scene sceneID="YNc-W3-hDb">
             <objects>
-                <viewController id="Ju8-D9-KCr" customClass="TopRatedMoviesVC" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ju8-D9-KCr" customClass="TopRatedMoviesViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JHS-i9-LFe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -454,10 +460,10 @@
             </objects>
             <point key="canvasLocation" x="2925.5999999999999" y="-300"/>
         </scene>
-        <!--Movie Details-->
+        <!--Movie Details View Controller-->
         <scene sceneID="hBG-m4-2Xb">
             <objects>
-                <viewController id="hrp-0h-efS" customClass="MovieDetails" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hrp-0h-efS" customClass="MovieDetailsViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lyX-Yq-b2R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -501,14 +507,14 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.4" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcH-dD-meg">
-                                                        <rect key="frame" x="180" y="304.5" width="20" height="18.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.4" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcH-dD-meg">
+                                                        <rect key="frame" x="178" y="304.5" width="20" height="18.5"/>
                                                         <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1984-05-23" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StA-F4-Lmh">
-                                                        <rect key="frame" x="180" y="328" width="77" height="18.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1984-05-23" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StA-F4-Lmh">
+                                                        <rect key="frame" x="178" y="328" width="77" height="18.5"/>
                                                         <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -548,12 +554,14 @@
                                                     <constraint firstItem="wIj-RC-gZt" firstAttribute="leading" secondItem="SnE-9B-TtQ" secondAttribute="leading" id="9yB-W3-Zcv"/>
                                                     <constraint firstItem="SMQ-Ti-Lqk" firstAttribute="leading" secondItem="SnE-9B-TtQ" secondAttribute="leading" constant="20" id="Abk-g9-VJ2"/>
                                                     <constraint firstItem="1XE-88-Rt3" firstAttribute="top" secondItem="StA-F4-Lmh" secondAttribute="bottom" constant="20" id="ItK-CP-3C6"/>
-                                                    <constraint firstItem="StA-F4-Lmh" firstAttribute="leading" secondItem="SMQ-Ti-Lqk" secondAttribute="trailing" constant="10" id="N1i-CW-IQy"/>
+                                                    <constraint firstItem="StA-F4-Lmh" firstAttribute="leading" secondItem="SMQ-Ti-Lqk" secondAttribute="trailing" constant="8" symbolic="YES" id="N1i-CW-IQy"/>
                                                     <constraint firstItem="wIj-RC-gZt" firstAttribute="top" secondItem="SnE-9B-TtQ" secondAttribute="top" id="N3i-Qq-jZ3"/>
                                                     <constraint firstAttribute="trailing" secondItem="1XE-88-Rt3" secondAttribute="trailing" constant="20" id="P9U-oY-aAX"/>
                                                     <constraint firstItem="WMM-xg-WdA" firstAttribute="top" secondItem="wIj-RC-gZt" secondAttribute="bottom" constant="10" id="R47-m5-2qq"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="StA-F4-Lmh" secondAttribute="trailing" constant="20" symbolic="YES" id="VZu-S8-aC7"/>
                                                     <constraint firstAttribute="bottom" secondItem="1XE-88-Rt3" secondAttribute="bottom" constant="20" id="YFG-9q-FAg"/>
-                                                    <constraint firstItem="RcH-dD-meg" firstAttribute="leading" secondItem="SMQ-Ti-Lqk" secondAttribute="trailing" constant="10" id="ZJZ-Ma-cUI"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RcH-dD-meg" secondAttribute="trailing" constant="20" symbolic="YES" id="YpW-To-gvP"/>
+                                                    <constraint firstItem="RcH-dD-meg" firstAttribute="leading" secondItem="SMQ-Ti-Lqk" secondAttribute="trailing" constant="8" symbolic="YES" id="ZJZ-Ma-cUI"/>
                                                     <constraint firstItem="RcH-dD-meg" firstAttribute="top" secondItem="WMM-xg-WdA" secondAttribute="bottom" constant="5" id="ZOa-aU-jrc"/>
                                                     <constraint firstItem="WMM-xg-WdA" firstAttribute="leading" secondItem="SMQ-Ti-Lqk" secondAttribute="trailing" constant="10" id="aHW-zV-Rgz"/>
                                                     <constraint firstItem="qQj-Ay-YOZ" firstAttribute="leading" secondItem="SnE-9B-TtQ" secondAttribute="leading" constant="20" id="qJB-tn-rhM"/>

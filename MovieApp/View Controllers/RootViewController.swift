@@ -8,7 +8,12 @@
 import UIKit
 
 class RootViewController: UIViewController {
+    
+    // MARK: - Proerties
+    
     private var current: UIViewController
+    
+    // MARK: - Init
     
     init() {
         self.current = UIStoryboard(name: "SplashScreen", bundle: nil).instantiateViewController(withIdentifier: "SplashScreen") as! SplashScreen
@@ -20,6 +25,8 @@ class RootViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    // MARK: - ViewController Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,8 +36,8 @@ class RootViewController: UIViewController {
         current.didMove(toParent: self)
     }
     
-    func showLoginScreen() {
-        let new = UINavigationController(rootViewController: LoginVC())
+    private func showLoginScreen() {
+        let new = UINavigationController(rootViewController: LoginViewController())
         addChild(new)
         new.view.frame = view.bounds
         view.addSubview(new.view)
@@ -42,7 +49,6 @@ class RootViewController: UIViewController {
     }
     
     private func animateDismissTransition(to new: UIViewController, completion: (() -> Void)? = nil) {
-        let initialFrame = CGRect(x: -view.bounds.width, y: 0, width: view.bounds.width, height: view.bounds.height)
         current.willMove(toParent: nil)
         addChild(new)
         transition(from: current, to: new, duration: 0.3, options: [], animations: {
@@ -63,10 +69,10 @@ class RootViewController: UIViewController {
     }
     
     func switchToLogout() {
-        let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginScreen") as! LoginVC
+        let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginScreen") as! LoginViewController
         let logoutScreen = UINavigationController(rootViewController: loginViewController)
         logoutScreen.isNavigationBarHidden = true
         animateDismissTransition(to: logoutScreen)
     }
-
+    
 }

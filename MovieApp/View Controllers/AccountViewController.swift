@@ -7,8 +7,10 @@
 
 import UIKit
 
-class AccountVC: BaseVC {
-    // MARK: - outlet
+class AccountViewController: BaseViewController {
+    
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var userName: UILabel!
@@ -16,8 +18,9 @@ class AccountVC: BaseVC {
     @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var reloadButton: UIButton!
     
-    // MARK: - variables
-    var profile: Account = Account.init(fromDictionary: [:])
+    // MARK: - Properties
+    
+    private var profile: Account = Account.init(fromDictionary: [:])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,7 +107,7 @@ class AccountVC: BaseVC {
             }
         }, B1Title: "YES", B2Title: "NO")
     }
-
+    
     // MARK: - LogOut
     func logOut(){
         UserDefaults.standard.removeObject(forKey: "sessionID")

@@ -7,12 +7,12 @@
 
 import UIKit
 
-class BaseVC: UIViewController, UITextFieldDelegate {
-
+class BaseViewController: UIViewController, UITextFieldDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.hideKeyboardWhenTappedAround()
-        // Do any additional setup after loading the view.
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
