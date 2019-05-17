@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ViewAnimator
 
 class TopRatedMoviesViewController: BaseViewController {
     
@@ -22,6 +23,9 @@ class TopRatedMoviesViewController: BaseViewController {
     private var isWating = false
     private var results : [Results] = []
     private var list = true
+    private let fromAnimation = AnimationType.from(direction: .right, offset: 50.0)
+    private let zoomAnimation = AnimationType.zoom(scale: 0.2)
+    private let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/6)
     
     // MARK: - ViewController Life Cycle
     
@@ -49,11 +53,13 @@ class TopRatedMoviesViewController: BaseViewController {
     @IBAction private func gridDisplay(_ sender: Any) {
         list = false
         topRatedMoviesCollectionView.reloadData()
+        animateTwoColumsCollectionView()
     }
     
     @IBAction private func listDisplay(_ sender: Any) {
         list = true
         topRatedMoviesCollectionView.reloadData()
+        animateOneColumsCollectionView()
     }
     
     // MARK: - API Call
@@ -72,8 +78,9 @@ class TopRatedMoviesViewController: BaseViewController {
                 self.insertMoviesInsideSQLDatabase(movies: moviesDic.results)
                 self.totalPages = moviesDic.totalPages
                 self.isWating = false
-                self.topRatedMoviesCollectionView.reloadData()
                 self.loadingIndicator.stopAnimating()
+                self.topRatedMoviesCollectionView.reloadData()
+                self.pageNum == 1 ? self.list ? self.animateOneColumsCollectionView() : self.animateTwoColumsCollectionView() : nil
                 self.reloadButton.isHidden = true
             }) { (error) in
                 self.getMoviesFromDataBase(message: error["status_message"] as? String ?? "Error")
@@ -181,5 +188,23 @@ extension TopRatedMoviesViewController {
     
     private func getMoreMovies() {
         callApiGetMovies()
+    }
+    
+    private func animateOneColumsCollectionView(){
+        self.topRatedMoviesCollectionView?.performBatchUpdates({
+            UIView.animate(views: self.topRatedMoviesCollectionView!.orderedVisibleCells,
+                           animations: [self.fromAnimation], completion: {
+                            
+            })
+        }, completion: nil)
+    }
+    
+    private func animateTwoColumsCollectionView(){
+        self.topRatedMoviesCollectionView?.performBatchUpdates({
+            UIView.animate(views: self.topRatedMoviesCollectionView!.orderedVisibleCells,
+                           animations: [self.zoomAnimation, self.rotateAnimation], completion: {
+                            
+            })
+        }, completion: nil)
     }
 }
