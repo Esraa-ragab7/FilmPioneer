@@ -1,5 +1,5 @@
 //
-//  SplashScreen.swift
+//  SplashScreenViewController.swift
 //  MovieApp
 //
 //  Created by Esraa Mohamed Ragab on 5/16/19.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SplashScreen: UIViewController {
+class SplashScreenViewController: UIViewController {
     
     // MARK: - Properties
     

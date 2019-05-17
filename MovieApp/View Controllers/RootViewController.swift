@@ -16,12 +16,12 @@ class RootViewController: UIViewController {
     // MARK: - Init
     
     init() {
-        self.current = UIStoryboard(name: "SplashScreen", bundle: nil).instantiateViewController(withIdentifier: "SplashScreen") as! SplashScreen
+        self.current = UIStoryboard(name: "SplashScreen", bundle: nil).instantiateViewController(withIdentifier: "SplashScreen") as! SplashScreenViewController
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.current = UIStoryboard(name: "SplashScreen", bundle: nil).instantiateViewController(withIdentifier: "SplashScreen") as! SplashScreen
+        self.current = UIStoryboard(name: "SplashScreen", bundle: nil).instantiateViewController(withIdentifier: "SplashScreen") as! SplashScreenViewController
         super.init(nibName: nil, bundle: nil)
     }
     
