@@ -74,15 +74,15 @@ extension LoginViewController {
     
     private func enableButtonAndTextFields() {
         loginButton.loadingIndicator(false)
-        password.allowsEditingTextAttributes = true
-        userName.allowsEditingTextAttributes = true
+        password.isUserInteractionEnabled = true
+        userName.isUserInteractionEnabled = true
         showPassword.isUserInteractionEnabled = true
     }
     
     private func disableButtonAndTextFields() {
         loginButton.loadingIndicator(true)
-        password.allowsEditingTextAttributes = false
-        userName.allowsEditingTextAttributes = false
+        password.isUserInteractionEnabled = false
+        userName.isUserInteractionEnabled = false
         showPassword.isUserInteractionEnabled = false
     }
     
