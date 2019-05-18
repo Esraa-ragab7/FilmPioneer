@@ -24,7 +24,7 @@ class AccountViewController: BaseViewController {
     // MARK: - Properties
     private let zoomAnimation = AnimationType.zoom(scale: 0.2)
     private let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/6)
-    private let fromAnimation = AnimationType.from(direction: .right, offset: 250.0)
+    private let fromAnimation = AnimationType.from(direction: .top, offset: 250.0)
     private var profile: Account = Account.init(fromDictionary: [:])
     
     // MARK: - ViewController Life Cycle

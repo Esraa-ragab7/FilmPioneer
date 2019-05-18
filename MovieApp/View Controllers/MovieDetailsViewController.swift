@@ -29,7 +29,8 @@ class MovieDetailsViewController: UIViewController {
     var movie : Results!
     private let zoomAnimation = AnimationType.zoom(scale: 0.2)
     private let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/6)
-    private let fromAnimation = AnimationType.from(direction: .right, offset: 250.0)
+    private let fromRightmAnimation = AnimationType.from(direction: .right, offset: 250.0)
+    private let fromBottomAnimation = AnimationType.from(direction: .bottom, offset: 250.0)
     
     // MARK: - ViewController Life Cycle
     
@@ -48,8 +49,11 @@ class MovieDetailsViewController: UIViewController {
         UIView.animate(views: [posterImageView],
                        animations: [rotateAnimation, zoomAnimation],
                        duration: 0.5)
-        UIView.animate(views: [detailsView,rateView],
-                       animations: [fromAnimation],
+        UIView.animate(views: [detailsView],
+                       animations: [fromBottomAnimation],
+                       duration: 0.5)
+        UIView.animate(views: [rateView],
+                       animations: [fromRightmAnimation],
                        duration: 0.5)
     }
     
