@@ -22,15 +22,6 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QU5-lc-Eq1">
                         <rect key="frame" x="0.0" y="0.0" width="216" height="230"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaH-K6-U6e">
-                                <rect key="frame" x="105.5" y="175" width="5" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="wLj-g1-dPb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSa-7N-CCM">
                                 <rect key="frame" x="20" y="120" width="176" height="50"/>
                                 <constraints>
@@ -40,8 +31,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GQ-5G-LjV">
-                                <rect key="frame" x="104" y="200" width="8" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="retertret" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GQ-5G-LjV">
+                                <rect key="frame" x="76.5" y="200" width="63.5" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="eYT-ZS-DpQ"/>
                                 </constraints>
@@ -56,18 +47,49 @@
                                     <constraint firstAttribute="height" constant="100" id="VYi-I3-h01"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xH-7E-56d">
+                                <rect key="frame" x="84.5" y="175" width="47.5" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjh-TV-2s0">
+                                        <rect key="frame" x="23" y="0.0" width="24.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="11"/>
+                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaH-K6-U6e">
+                                        <rect key="frame" x="0.0" y="0.0" width="23" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="wLj-g1-dPb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="HaH-K6-U6e" firstAttribute="leading" secondItem="1xH-7E-56d" secondAttribute="leading" id="3bf-Bq-bRw"/>
+                                    <constraint firstAttribute="bottom" secondItem="HaH-K6-U6e" secondAttribute="bottom" id="DCr-E6-kKH"/>
+                                    <constraint firstItem="HaH-K6-U6e" firstAttribute="top" secondItem="1xH-7E-56d" secondAttribute="top" id="WF4-f1-bZd"/>
+                                    <constraint firstItem="HaH-K6-U6e" firstAttribute="centerX" secondItem="1xH-7E-56d" secondAttribute="centerX" constant="-12.25" id="YNC-tV-RhH"/>
+                                    <constraint firstItem="Bjh-TV-2s0" firstAttribute="top" secondItem="1xH-7E-56d" secondAttribute="top" id="fCp-yt-Vnm"/>
+                                    <constraint firstItem="Bjh-TV-2s0" firstAttribute="leading" secondItem="HaH-K6-U6e" secondAttribute="trailing" id="p9Z-HR-ME1"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bjh-TV-2s0" secondAttribute="bottom" id="rY8-cA-3Qp"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bjh-TV-2s0" secondAttribute="trailing" id="xwL-cd-osX"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nSa-7N-CCM" secondAttribute="trailing" constant="20" id="3uW-RZ-i6P"/>
                             <constraint firstItem="5GQ-5G-LjV" firstAttribute="centerX" secondItem="QU5-lc-Eq1" secondAttribute="centerX" id="A3Y-PB-Bb5"/>
                             <constraint firstItem="nSa-7N-CCM" firstAttribute="leading" secondItem="QU5-lc-Eq1" secondAttribute="leading" constant="20" id="EXS-r5-bNV"/>
-                            <constraint firstItem="HaH-K6-U6e" firstAttribute="top" secondItem="nSa-7N-CCM" secondAttribute="bottom" constant="5" id="Klq-AL-a7B"/>
+                            <constraint firstItem="1xH-7E-56d" firstAttribute="centerX" secondItem="QU5-lc-Eq1" secondAttribute="centerX" id="FWa-gy-EKQ"/>
                             <constraint firstItem="GmA-O2-C9q" firstAttribute="centerX" secondItem="QU5-lc-Eq1" secondAttribute="centerX" id="KmV-of-fz5"/>
+                            <constraint firstItem="1xH-7E-56d" firstAttribute="top" secondItem="nSa-7N-CCM" secondAttribute="bottom" constant="5" id="LLN-6i-Q7A"/>
                             <constraint firstAttribute="bottom" secondItem="5GQ-5G-LjV" secondAttribute="bottom" constant="10" id="RiO-4P-ZBK"/>
                             <constraint firstItem="GmA-O2-C9q" firstAttribute="top" secondItem="QU5-lc-Eq1" secondAttribute="top" constant="10" id="Srh-yF-jSr"/>
-                            <constraint firstItem="5GQ-5G-LjV" firstAttribute="top" secondItem="HaH-K6-U6e" secondAttribute="bottom" constant="5" id="T48-a9-f74"/>
-                            <constraint firstItem="HaH-K6-U6e" firstAttribute="centerX" secondItem="QU5-lc-Eq1" secondAttribute="centerX" id="XNg-10-x1c"/>
+                            <constraint firstItem="5GQ-5G-LjV" firstAttribute="top" secondItem="1xH-7E-56d" secondAttribute="bottom" constant="5" id="X8c-p0-Rlm"/>
                             <constraint firstItem="nSa-7N-CCM" firstAttribute="top" secondItem="GmA-O2-C9q" secondAttribute="bottom" constant="10" id="eI6-m4-A07"/>
                         </constraints>
                     </view>
