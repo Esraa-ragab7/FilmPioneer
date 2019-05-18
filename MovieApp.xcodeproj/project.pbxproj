@@ -41,6 +41,7 @@
 		F2E33BEE228D031F006AF116 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BED228D031F006AF116 /* AccountViewController.swift */; };
 		F2E33BF0228D0D4F006AF116 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E33BEF228D0D4F006AF116 /* Account.swift */; };
 		F2F5CDD9228FA3AD008421A0 /* MoviesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F5CDD8228FA3AD008421A0 /* MoviesManager.swift */; };
+		F2F5CDDB2290380D008421A0 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F5CDDA2290380D008421A0 /* AccountManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		F2E33BED228D031F006AF116 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		F2E33BEF228D0D4F006AF116 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		F2F5CDD8228FA3AD008421A0 /* MoviesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesManager.swift; sourceTree = "<group>"; };
+		F2F5CDDA2290380D008421A0 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			children = (
 				BCBF1304228E4E1D00E94D15 /* AuthenticationManager.swift */,
 				F2F5CDD8228FA3AD008421A0 /* MoviesManager.swift */,
+				F2F5CDDA2290380D008421A0 /* AccountManager.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				F22813F52289902200FCB9BC /* AppDelegate.swift in Sources */,
 				F2E33BEA228CECE8006AF116 /* MovieDetailsViewController.swift in Sources */,
 				F2C8870E228D9CC80036E7BC /* MoviesSQLiteDataBase.swift in Sources */,
+				F2F5CDDB2290380D008421A0 /* AccountManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
