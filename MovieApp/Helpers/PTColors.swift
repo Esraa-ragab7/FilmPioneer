@@ -37,5 +37,4 @@ extension UIColor {
     var fadedRed: UIColor { return UIColor(red: 225/255, green: 75/255, blue: 96/255, alpha: 1) }
     var perrywinkle: UIColor { return UIColor(red: 137/255, green: 145/255, blue: 240/255, alpha: 1) }
     var rosePink: UIColor { return UIColor(red: 249/255, green: 136/255, blue: 159/255, alpha: 1) }
-//    var orangeYellow: UIColor { return UIColor(red: 249/255, green: 0/255, blue: 0/255, alpha: 1) }
 }

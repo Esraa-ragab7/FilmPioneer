@@ -133,7 +133,7 @@ class MoviesSQLiteDataBase: NSObject {
         }
         
         if sqlite3_step(stmt) == SQLITE_DONE {
-            print("Delete CartData")
+            print("Delete Movies")
         }
     }
     
