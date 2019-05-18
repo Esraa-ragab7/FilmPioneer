@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ViewAnimator
 
 class AccountViewController: BaseViewController {
     
@@ -17,9 +18,13 @@ class AccountViewController: BaseViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var reloadButton: UIButton!
+    @IBOutlet weak var detailsView: UIView!
+    @IBOutlet weak var imageView: UIView!
     
     // MARK: - Properties
-    
+    private let zoomAnimation = AnimationType.zoom(scale: 0.2)
+    private let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/6)
+    private let fromAnimation = AnimationType.from(direction: .right, offset: 250.0)
     private var profile: Account = Account.init(fromDictionary: [:])
     
     override func viewDidLoad() {
@@ -67,8 +72,14 @@ class AccountViewController: BaseViewController {
     func setUpData(){
         self.avatarImage.kf.indicatorType = .activity
         self.avatarImage.kf.setImage(with: URL(string: self.profile.gravatar), placeholder: #imageLiteral(resourceName: "placeholder"))
+        UIView.animate(views: [imageView],
+                       animations: [rotateAnimation, zoomAnimation],
+                       duration: 0.5)
         self.name.text = self.profile.name
         self.userName.text = self.profile.username
+        UIView.animate(views: [detailsView],
+                       animations: [fromAnimation],
+                       duration: 0.5)
     }
     
     func faildCall(){

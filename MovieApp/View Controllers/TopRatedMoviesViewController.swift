@@ -23,9 +23,10 @@ class TopRatedMoviesViewController: BaseViewController {
     private var isWating = false
     private var results : [Results] = []
     private var list = true
-    private let fromAnimation = AnimationType.from(direction: .right, offset: 50.0)
+    private let fromAnimation = AnimationType.from(direction: .right, offset: 250.0)
     private let zoomAnimation = AnimationType.zoom(scale: 0.2)
     private let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/6)
+    let screenWidth = UIScreen.main.bounds.width
     
     // MARK: - ViewController Life Cycle
     
@@ -51,14 +52,18 @@ class TopRatedMoviesViewController: BaseViewController {
     }
     
     @IBAction private func gridDisplay(_ sender: Any) {
+        guard list else {
+            return
+        }
         list = false
-        topRatedMoviesCollectionView.reloadData()
         animateTwoColumsCollectionView()
     }
     
     @IBAction private func listDisplay(_ sender: Any) {
+        guard !list else {
+            return
+        }
         list = true
-        topRatedMoviesCollectionView.reloadData()
         animateOneColumsCollectionView()
     }
     
@@ -66,27 +71,31 @@ class TopRatedMoviesViewController: BaseViewController {
     
     private func callApiGetMovies(){
         self.reloadButton.isHidden = true
-        if pageNum > totalPages {
+        
+        guard pageNum <= totalPages else {
             return
-        } else {
-            loadingIndicator.startAnimating()
         }
-        if NetworkManager.sharedInstance.isConnected() {
-            NetworkManager.sharedInstance.serverRequests(url: "https://api.themoviedb.org/3/movie/top_rated?api_key=\(Constants.api.api_key.rawValue)&language=en-US&page=\(pageNum)", success: { (res) in
-                let moviesDic = Movies.init(fromDictionary: res)
-                self.results.append(contentsOf: moviesDic.results)
-                self.insertMoviesInsideSQLDatabase(movies: moviesDic.results)
-                self.totalPages = moviesDic.totalPages
-                self.isWating = false
-                self.loadingIndicator.stopAnimating()
-                self.topRatedMoviesCollectionView.reloadData()
-                self.pageNum == 1 ? self.list ? self.animateOneColumsCollectionView() : self.animateTwoColumsCollectionView() : nil
-                self.reloadButton.isHidden = true
-            }) { (error) in
-                self.getMoviesFromDataBase(message: error["status_message"] as? String ?? "Error")
-            }
-        } else {
+        
+        loadingIndicator.startAnimating()
+
+        guard NetworkManager.sharedInstance.isConnected() else {
             getMoviesFromDataBase(message: "Please Connect to the Internet..")
+            return
+        }
+        
+        MoviesManager.getTopRatedMovies(pageNum: "\(pageNum)") { (res, error) in
+            if error != nil {
+                self.getMoviesFromDataBase(message: error!["status_message"] as? String ?? "Error")
+                return
+            }
+            let moviesDic = Movies.init(fromDictionary: res!)
+            self.results.append(contentsOf: moviesDic.results)
+            self.insertMoviesInsideSQLDatabase(movies: moviesDic.results)
+            self.totalPages = moviesDic.totalPages
+            self.isWating = false
+            self.loadingIndicator.stopAnimating()
+            self.pageNum == 1 ? self.list ? self.animateOneColumsCollectionView() : self.animateTwoColumsCollectionView() : self.topRatedMoviesCollectionView.reloadData()
+            self.reloadButton.isHidden = true
         }
     }
     
@@ -105,9 +114,9 @@ class TopRatedMoviesViewController: BaseViewController {
 extension TopRatedMoviesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if list {
-            return CGSize(width: collectionView.frame.width - 40, height: 110)
+            return CGSize(width: screenWidth - 40, height: 110)
         } else {
-            return CGSize(width: (collectionView.frame.width - 60)/2, height: 230)
+            return CGSize(width: (screenWidth - 60)/2, height: 230)
         }
     }
 }
@@ -164,11 +173,11 @@ extension TopRatedMoviesViewController {
     }
     
     private func getMoviesFromDataBase(message: String) {
-        if MoviesSQLiteDataBase.MovieDatabase.selectAllMovies() != [] {
+        if MoviesSQLiteDataBase.MovieDatabase.selectAllMovies() != [] && pageNum == 1 {
             self.results = MoviesSQLiteDataBase.MovieDatabase.selectAllMovies()
             self.reloadButton.isHidden = true
             self.isWating = false
-            self.topRatedMoviesCollectionView.reloadData()
+            self.list ? self.animateOneColumsCollectionView() : self.animateTwoColumsCollectionView()
             self.loadingIndicator.stopAnimating()
         } else {
             reloadButton.isHidden = self.pageNum == 1 ? false : true
@@ -191,6 +200,7 @@ extension TopRatedMoviesViewController {
     }
     
     private func animateOneColumsCollectionView(){
+        self.topRatedMoviesCollectionView.reloadData()
         self.topRatedMoviesCollectionView?.performBatchUpdates({
             UIView.animate(views: self.topRatedMoviesCollectionView!.orderedVisibleCells,
                            animations: [self.fromAnimation], completion: {
@@ -200,6 +210,7 @@ extension TopRatedMoviesViewController {
     }
     
     private func animateTwoColumsCollectionView(){
+        self.topRatedMoviesCollectionView.reloadData()
         self.topRatedMoviesCollectionView?.performBatchUpdates({
             UIView.animate(views: self.topRatedMoviesCollectionView!.orderedVisibleCells,
                            animations: [self.zoomAnimation, self.rotateAnimation], completion: {
