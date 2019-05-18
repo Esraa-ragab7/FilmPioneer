@@ -93,7 +93,7 @@ class MoviesSQLiteDataBase: NSObject {
                 "title": title,
                 "backdrop": backdropPath,
                 "vote_average": voteAverage,
-                "vote_count": voteCount,
+                "vote_count_": voteCount,
                 "poster": posterPath,
                 "release_date": releaseDate,
                 "overview": overview,

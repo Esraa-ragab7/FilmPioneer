@@ -47,6 +47,9 @@ class Results : NSObject, NSCoding{
 		video = dictionary["video"] as? Bool
         voteAverage = Double(round(((dictionary["vote_average"] as? Double) ?? 0) * 10)/10)
 		voteCount = dictionary["vote_count"] as? Int
+        if dictionary["vote_count_"] as? Int32 != nil {
+            voteCount = Int(dictionary["vote_count_"] as! Int32)
+        }
 	}
 
 	/**
